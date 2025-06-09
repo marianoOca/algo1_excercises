@@ -1,0 +1,3 @@
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase5/cmake-build-debug/CMakeFiles/laboDebugging.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

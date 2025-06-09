@@ -1,0 +1,3 @@
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/CMakeFiles/Clase8.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/CMakeFiles/rebuild_cache.dir

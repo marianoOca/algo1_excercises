@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase10/src/ejercicios.cpp
+ejercicios.h
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase10/src/ejercicios.h
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase10/src/ejercicios.h
+string
+-
+vector
+-
+

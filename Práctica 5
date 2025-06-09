@@ -1,0 +1,335 @@
+10. c.
+3.
+
+wp( i := i+1, I ) ≡ def(i+1) ∧L |s| = |S₀| ∧ 0 ≤ i + 1 ≤ |s| ∧L (∀j:ℤ)( (0 ≤ j < i+1 ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i+1 ≤ j < |s| ⟶L s[j]=S₀[j] )
+
+				  ≡ |s| = |S₀| ∧ -1 ≤ i < |s|  ∧L  (∀j:ℤ)( (0 ≤ j < i+1 ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i+1 ≤ j < |s| ⟶L s[j]=S₀[j] ) ≡ E₁
+
+
+wp(if..., E₁) ≡ def(i < |s|) ∧L (i < |s| ∧ wp(setAt(s, i, b), E₁)) ∨ (i ≥ |s| ∧ wp(skip, E₁))
+
+																															/--------------------------------
+wp(setAt(s, i, b), E₁) ≡ def(setAt(s, i, b)) ∧L |setAt(s, i, b)| = |S₀| ∧ -1 ≤ i < |setAt(s, i, b)|		  					| como |setAt(s, i, b)| ≡ |s|
+							∧L																								|
+							(∀j:ℤ)( (0 ≤ j < i+1 ∧L S₀[j]=a) ⟶L setAt(s, i, b)[j]=b )										| y 		  setAt(s,i,b)[i] ≡ b
+							∧ 																								| con j ≠ i setAt(s,i,b)[j] ≡ s[j]
+							(∀j:ℤ)( i+1 ≤ j < |setAt(s, i, b)| ⟶L setAt(s, i, b)[j]=S₀[j] )								\---------------------------------
+
+					   ≡ 0 ≤ i < |s| ∧L |s| = |S₀| ∧ -1 ≤ i < |s|  ∧L  (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ ( j = i ⟶L  setAt(s,i,b)[i]=b)
+																		∧ 														  \true/              b=b
+																		(∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] )
+
+		 ≡ 0 ≤ i < |s| ∧ |s| = |S₀| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] )
+
+
+wp(if..., E₁) ≡ ( i < |s| ∧ wp(setAt(s, i, b), E₁) ) ∨ ( i ≥ |s| ∧ wp(skip, E₁) )
+
+			  ≡ ( i < |s| ∧ 0 ≤ i < |s| ∧ |s| = |S₀|  ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] ) ) 
+			    ∨
+			    ( i ≥ |s| ∧ |s| = |S₀| ∧ -1 ≤ i < |s| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ ( (j = i ∧L S₀[i]=a) ⟶L s[i]=b )
+			                         				   ∧  (∀j:ℤ)( i+1 ≤ j < |s| ⟶L s[j]=S₀[j] ) )
+
+			  ≡ |s| = |S₀| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] )
+			    ∧ (																											/---------------------------------
+			    (0 ≤ i < |s|) ∨ (i ≥ |s| ∧ -1 ≤ i < |s| ∧L ( (j = i ∧L S₀[i]=a) ⟶L s[i]=b ) ) )						 	|i ≥ |s| ∧ -1 ≤ i < |s|  ≡  false
+			    																											\---------------------------------
+			  ≡ |s| = |S₀| ∧ 0 ≤ i < |s| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] )
+
+
+{I ∧ B} ⟶ wp(ciclo, I)
+						  (i<|s| ∧ 0≤i≤|s|)
+{I ∧ B} ≡      |s| = |S₀| ∧ 0 ≤ i < |s| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i ≤ j < |s| ⟶L s[j]=S₀[j] )
+
+wp(ciclo, I) ≡ |s| = |S₀| ∧ 0 ≤ i < |s| ∧L (∀j:ℤ)( (0 ≤ j < i ∧L S₀[j]=a) ⟶L s[j]=b ) ∧ (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] )
+
+como (∀j:ℤ)( i ≤ j < |s| ⟶L s[j]=S₀[j] )  ⟶  (∀j:ℤ)( i < j < |s| ⟶L s[j]=S₀[j] ) y el resto es igual, concluimos que {I ∧ B} ciclo {I}
+
+
+
+11.  I ≡ -1 ≤ i < |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i < j < |s| ∧L s[j]=e ))
+
+
+3. {I ∧ B} ciclo {I}  entonces qvq'  {I ∧ B} ⟶ wp(ciclo,I) ≡ wp(if..., wp(i:=i-1, I))
+
+				considero que todas las variables están bien definidas
+wp(i:=i-1, I) ≡ def(i-1) ∧L -1 ≤ i-1 < |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i-1 < j < |s| ∧L s[j]=e ))
+
+			  ≡ 0 ≤ i ≤ |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i-1 < j < |s| ∧L s[j]=e )) ≡ E₁
+
+
+wp(if..., E₁) ≡ def(s[i]=e) ∧L ( (s[i]=e ∧ wp(j:=i, E₁)) ∨ (s[i]≠e ∧ wp(skip, E₁)) )
+
+			  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ wp(j:=i, E₁)) ∨ (s[i]≠e ∧ E₁) )
+
+
+wp(j:=i, E₁) ≡ def(i) ∧L 0 ≤ i ≤ |s| ∧L (i=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e )) ∧ (i≠-1 ⟶ ( i-1 < i < |s| ∧L s[i]=e ))
+
+			 ≡ 0 ≤ i ≤ |s| ∧L (i≠-1 ⟶ ( i < |s| ∧L s[i]=e ))
+
+
+wp(if..., E₁) ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ 0 ≤ i ≤ |s| ∧L (i≠-1 ⟶ ( i < |s| ∧L s[j]=e )) ) 
+								∨
+								 (s[i]≠e ∧ 0 ≤ i ≤ |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i-1 < j < |s| ∧L s[j]=e ))) )
+
+			  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧L (i≠-1 ⟶ ( i < |s| ∧L s[j]=e )) ) 
+								∨
+								  (s[i]≠e ∧L (j=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i-1 < j < |s| ∧L s[j]=e ))) )
+
+
+{I ∧ B} ≡ 0 ≤ i < |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i < j < |s| ∧L s[j]=e ))  ⟶  wp(if..., E₁)     ✓
+
+≡ 0 ≤ i < |s|     ✓
+  ∧L 
+	( (s[i]=e ∧L (i≠-1 ⟶ ( i < |s| ∧L s[j]=e )) )     ⟶ esto siempre es false porque nunca sucede que s[i]=e
+	  ∨
+	  (s[i]≠e ∧L (j=-1 ⟶ (∀k:ℤ)( i-1 < k < |s| ⟶L s[k]≠e ))     ✓ se cumple porque i < k ⟶ i-1 < k ≡ i ≤ k
+			     ∧ 
+			     (j≠-1 ⟶ ( i-1 < j < |s| ∧L s[j]=e ))) )     ✓ se cumple porque i < j ⟶ i-1 < j ≡ i ≤ j
+
+
+
+4. {I ∧ fv ≤ 0} ⟶ ¬B						fv ≡ i + 1						B ≡ i ≥ 0
+
+I ∧ fv ≤ 0 ≡  I ∧ i + 1 ≤ 0  ≡  I ∧ i ≤ -1  ≡  I ∧ i < 0  ≡  I ∧ ¬(i ≥ 0)  I ∧ ¬(B) ⟶ ¬B     ✓
+
+
+
+5. {I ∧ B ∧ v₀=fv} ciclo {fv < v₀}  entonces qvq'  {I ∧ B ∧ v₀=i + 1} ⟶ wp(ciclo, i + 1 < v₀) ≡ wp(if..., wp(i:=i-1, i + 1 < v₀))
+
+
+wp(i:=i-1, i + 1 < v₀) ≡ def(i-1) i - 1 + 1 < v₀  ≡  i < v₀
+
+
+wp(if..., i < v₀) ≡ def(s[i]=e) ∧L ( (s[i]=e ∧ wp(j:=i, i < v₀)) ∨ (s[i]≠e ∧ wp(skip, i < v₀)) )
+
+				  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ i < v₀) ∨ (s[i]≠e ∧ i < v₀) )  
+
+				  ≡  0 ≤ i < |s|     ✓
+				  	 ∧L 
+				  	 i < v₀     ✓ porque si v₀ = i + 1, entonces i < i + 1
+
+
+{I ∧ B ∧ v₀=fv} ≡  0 ≤ i < |s| ∧L (j=-1 ⟶ (∀k:ℤ)( i < k < |s| ⟶L s[k]≠e )) ∧ (j≠-1 ⟶ ( i < j < |s| ∧L s[j]=e ))
+					∧
+					v₀ = i + 1
+
+Demostrado el teorema del invariante, concluimos que el ciclo termina y es correcto.
+
+
+
+12. I: 0 ≤ i ≤ |s| ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k < i ∧L s[k]=e) )
+
+
+3. {I ∧ B} ciclo {I}  entonces qvq'  {I ∧ B} ⟶ wp(ciclo, I) ≡ wp(if..., wp(i:=i+1, I))
+
+
+wp(i:=i+1, I) ≡ def(i+1) ∧L 0 ≤ i+1 ≤ |s| ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k < i+1 ∧L s[k]=e) )
+
+			  ≡ -1 ≤ i < |s| ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) ) ≡ E₁
+
+
+wp(if..., E₁) ≡ def(s[i]=e) ∧L ( (s[i]=e ∧ wp(j:=i, E₁)) ∨ (s[i]≠e ∧ wp(skip, E₁)) )
+
+			  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ wp(j:=i, E₁)) ∨ (s[i]≠e ∧ E₁) )
+
+
+wp(j:=i, E₁) ≡ def(i) ∧L -1 ≤ i < |s| ∧ ( i ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) )
+
+
+wp(if..., E₁) ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ -1 ≤ i < |s| ∧ ( i ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) ))			saco el -1 ≤ i < |s| afuera de ambos
+								  ∨ 
+								  (s[i]≠e ∧ -1 ≤ i < |s| ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) )) )
+
+			  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ ( i ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) ))							si 0 ≤ i, entonces i ≠ -1 ⟶ true
+								  ∨ 
+								  (s[i]≠e ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) )) )
+
+			  ≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) ) ∨ (s[i]≠e ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) )) )
+
+
+{I ∧ B} ≡ 0 ≤ i < |s| ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k < i ∧L s[k]=e) )	 ⟶  wp(ciclo, I)							B: i < |s|
+
+wp(ciclo, I) ≡ 0 ≤ i < |s|     ✓
+                ∧L 
+                (  (s[i]=e ∧ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) ) si      ✓  porque s[i]=e entonces existe s[k=i]=e
+                   ∨ 
+                   (s[i]≠e ∧ ( j ≠ -1 ⟷ (∃k:ℤ)(0 ≤ k ≤ i ∧L s[k]=e) )) )      ✓  porque si s[i]≠e entonces k queda entre 0≤k<i, idéntico a I
+
+
+
+4. {I ∧ fv ≤ 0} ⟶ ¬B																							fv: |s| - i
+
+I ∧ fv ≤ 0  ≡  I ∧ |s| - i ≤ 0  ≡  I ∧ |s| ≤ i  ≡  I ∧ ¬(|s| > i)  ≡  I ∧ ¬B  ⟶ ¬B      ✓
+
+
+
+5. {I ∧ B ∧ v₀ = fv} ciclo {fv < v₀}  entonces qvq'  {I ∧ B ∧ v₀ = fv} ⟶ wp(ciclo, fv < v₀) ≡ wp(if..., wp(i:=i+1, fv < v₀))
+
+
+wp(i:=i+1, |s| - i < v₀)  ≡  def(i+1) ∧L |s| - (i+1) < v₀  ≡  |s| - i - 1 < v₀
+
+
+wp(if..., |s| - i - 1 < v₀) ≡ def(s[i]=e) ∧L ( (s[i]=e ∧ wp(j:=i, |s| - i - 1 < v₀)) ∨ (s[i]≠e ∧ wp(skip, |s| - i - 1 < v₀)) )
+
+							≡ 0 ≤ i < |s| ∧L ( (s[i]=e ∧ |s| - i - 1 < v₀) ∨ (s[i]≠e ∧ |s| - i - 1 < v₀) )
+
+							≡ 0 ≤ i < |s|      ✓  por I ∧ B
+							  ∧ 
+							  |s| - i - 1 < v₀      ✓ porque con v₀ = |s| - i, entonces |s| - i - 1 < |s| - i
+
+
+Entonces por el teorema del invariante demostramos que el ciclo es correcto y termina.
+
+
+
+14. 1 programa, 2 ciclos
+
+∘ Pre ⟶L wp(i:=0, Pca)
+
+	wp(i:=0, Pca)  ≡  def(0) ∧L 0 = 0 ∧ |r| = |a| + |b| ∧ r = R₀  ≡  |r| = |a| + |b| ∧ r = R₀  ≡  Pre      ✓
+
+
+
+∘ Qcb ⟶L Post      ✓ porque Qbc ≡ Post
+
+
+
+∘ {Pca} programa {Qcb}  ≡  {Pca} ciclo a {Qca} ∧ {Qca} i:=0 {Pcb} ∧ {Pcb} ciclo b {Qcb}
+
+A. {Pca} ciclo a {Qca}  uso teorema del invariante: Ia: 0 ≤ i ≤ |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j]=a[j])
+
+	1.  Pca        ⟶ 	 	Ia
+		∘ i=0				∘ 0 ≤ i ≤ |a|      ✓
+		∘ |r|=|a|+|b|		∘ |r|=|R₀|      ✓
+		∘ r=R₀				∘ (∀j:ℤ)(0 ≤ j < i ⟶L r[j]=a[j])      ✓ porque con i = 0 queda 0 ≤ j < 0 lo que siempre es false
+
+
+
+	2. {Ia ∧ ¬Ba}  ⟶ Qca																				Ba: i < |a| ⟶ ¬Ba: i ≥ |a|
+
+		{Ia ∧ ¬Ba}  ≡  i = |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j]=a[j]) ⟶ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ≡ Qca      ✓
+
+
+
+	3. {Ia ∧ Ba} ciclo a {Ia}  entonces qvq'  {Ia ∧ Ba} ⟶ wp(ciclo, Ia) ≡ wp(r[i]:=a[i], wp(i:=i+1, Ia))
+
+	wp(i:=i+1, Ia) ≡ def(i+1) ∧L 0 ≤ i+1 ≤ |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < i+1 ⟶L r[j]=a[j])
+
+				   ≡ -1 ≤ i < |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j ≤ i ⟶L r[j]=a[j]) ≡ E₁
+
+
+	wp(setAt(r, i, a[i]), E₁) ≡ def(setAt(r, i, a[i])) ∧L -1 ≤ i < |a| ∧ |setAt(r, i, a[i])|=|R₀| ∧ (∀j:ℤ)(0 ≤ j ≤ i ⟶L setAt(r, i, a[i])[j]=a[j])
+
+							  ≡ 0 ≤ i < |r| ∧L 0 ≤ i < |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)( (0 ≤ j < i ⟶L r[j]=a[j])
+							  													   ∧
+							  													  (j=i ⟶L a[i]=a[i])  )	como a[i]=a[i] siempre es true, puedo sacarlo
+							  	como |a| < |r| porque |r|=|a|+|b|
+							  ≡ 0 ≤ i < |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j]=a[j])      ✓
+
+
+	{Ia ∧ Ba} ≡ 0 ≤ i < |a| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j]=a[j])      ✓ son idénticos
+
+
+
+	4. {Ia ∧ fva ≤ 0} ⟶ ¬Ba 																			fva: |a| - i
+
+	Ia ∧ fva ≤ 0  ≡  Ia ∧ |a| - i ≤ 0  ≡  Ia ∧ |a| ≤ i  ≡  Ia ∧ ¬(|a| > i)  ≡  Ia ∧ ¬Ba  ⟶ ¬Ba      ✓
+
+
+
+	5. {Ia ∧ B ∧ fva = v₀a} ciclo a {fva < v₀a} ≡ wp(ciclo, fva < v₀a) ≡ wp(setAt(r, i, a[i]), wp(i:=i+1, |a| - i < v₀a))
+
+
+	wp(i:=i+1, |a| - i < v₀a)  ≡  def(i+1) ∧L |a| - (i+1) < v₀a  ≡ |a| - i - 1 < v₀a  ≡  E₂
+
+
+	wp(setAt(r, i, a[i]), |a| - i - 1 < v₀a)  ≡  def(setAt(r, i, a[i])) ∧L |a| - i - 1 < v₀a
+
+											  ≡  0 ≤ i < |a|      ✓  por I ∧ B
+											     ∧ 
+											     |a| - i - 1 < v₀a      ✓  porque con v₀a = |a| - i, entonces |a| - i - 1 < |a| - i
+
+	Demostrado el teorema del invariante en el ciclo a, podemos decir que el ciclo es correcto y termina
+
+
+
+B. {Qca} i:=0 {Pcb} ≡ {Qca} ⟶ wp(i:=0, Pcb)
+
+	wp(i:=0, Pcb)  ≡  def(0) ∧L |r| = |R₀| ∧ 0 = 0 ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j])
+
+				   ≡  |r| = |R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j])  ≡  Qca      ✓
+
+
+
+C. {Pcb} ciclo b {Qcb}  uso teo. del invariante: Ib: 0 ≤ i ≤ |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j])
+
+
+	1.  Pcb       		 ⟶ 	 		Ib
+		∘ i=0							∘ 0 ≤ i ≤ |b|      ✓
+		∘ |r|=|R₀|						∘ |r|=|R₀|      ✓
+		∘ (∀j:ℤ)						∘ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j])      ✓
+		  (0 ≤ j < |a| ⟶L r[j]=a[j])	∘ (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j])      ✓ porque con i = 0 queda 0 ≤ j < 0 lo que siempre es false
+
+
+
+	2. {Ib ∧ ¬Bb}  ⟶ Qcb																				Bb: i < |b| ⟶ ¬Bb: i ≥ |b|
+
+		{Ib ∧ ¬Bb}  ≡  i = |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j]) 
+
+					⟶ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < |b| ⟶L r[j+|a|]=b[j]) ≡ Qcb      ✓
+
+
+
+	3. {Ib ∧ Bb} ciclo b {Ib}  entonces qvq'  {Ib ∧ Bb} ⟶ wp(ciclo, Ib) ≡ wp(r[|a|+i]:=b[i], wp(i:=i+1, Ib))
+
+	wp(i:=i+1, Ib) ≡ def(i+1) ∧L 0 ≤ i+1 ≤ |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < i+1 ⟶L r[j+|a|]=b[j])
+
+				   ≡ -1 ≤ i < |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j ≤ i ⟶L r[j+|a|]=b[j]) ≡ E₃
+
+
+	wp(setAt(r, |a|+i, b[i]), E₃) ≡ def(setAt(r, |a|+i, b[i])) ∧L -1 ≤ i < |b| ∧ |setAt(r, |a|+i, b[i])|=|R₀| 
+																∧ 
+																(∀j:ℤ)(0 ≤ j < |a| ⟶L setAt(r, |a|+i, b[i])[j]=a[j])
+																∧
+																(∀j:ℤ)(0 ≤ j ≤ i ⟶L setAt(r, |a|+i, b[i])[j+|a|]=b[j])
+
+								  ≡ 0 ≤ |a|+i < |r| ∧ 0 ≤ i < |b| ∧L -1 ≤ i < |b| ∧ |r|=|R₀| 
+																	∧ 
+																	(∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j])
+																	∧
+																	(∀j:ℤ)( (0 ≤ j < i ⟶L r[j+|a|]=b[j]) 
+																			 ∧
+																			 (j=i ⟶L b[i]=b[i]) )     como b[i]=b[i] siempre es true, puedo sacarlo
+									uso que |r|=|a|+|b| ⟶ |b|=|r|-|a| 
+								  ≡ -|a| ≤ i < |r|-|a| ∧ 0 ≤ i < |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j])
+																				   ∧
+																				   (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j])
+
+								  ≡ 0 ≤ i < |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j])     ✓
+	
+	
+	{Ib ∧ Bb} ≡ 0 ≤ i < |b| ∧ |r|=|R₀| ∧ (∀j:ℤ)(0 ≤ j < |a| ⟶L r[j]=a[j]) ∧ (∀j:ℤ)(0 ≤ j < i ⟶L r[j+|a|]=b[j])      ✓ son idénticos
+
+
+
+	4. {Ib ∧ fvb ≤ 0} ⟶ ¬Bb 																			fvb: |b| - i
+
+	Ib ∧ fvb ≤ 0  ≡  Ib ∧ |b| - i ≤ 0  ≡  Ib ∧ |b| ≤ i  ≡  Ib ∧ ¬(|b| > i)  ≡  Ib ∧ ¬Bb  ⟶ ¬Bb      ✓
+
+
+
+	5. {Ib ∧ Bb ∧ fvb = v₀b} ciclo b {fvb < v₀b} ≡ wp(ciclo b, fvb < v₀b) ≡ wp(setAt(r, |a|+i, b[i]), wp(i:=i+1, |b| - i < v₀b))
+
+
+	wp(i:=i+1, |b| - i < v₀b)  ≡  def(i+1) ∧L |b| - (i+1) < v₀b  ≡ |b| - i - 1 < v₀b
+
+
+	wp(setAt(r, |a|+i, b[i]), |b| - i - 1 < v₀b)  ≡  def(setAt(r, |a|+i, b[i])) ∧L |b| - i - 1 < v₀b
+
+											  ≡  0 ≤ i < |b|      ✓  por Ib ∧ Bb
+											     ∧ 
+											     |b| - i - 1 < v₀b      ✓  porque con v₀b = |b| - i, entonces |b| - i - 1 < |b| - i
+
+	Demostrado el teorema del invariante en el ciclo b, podemos decir que el ciclo es correcto y termina.
+
+	Demostrados todos los ítems marcados y por transitividad podemos concluir que el programa es correcto y termina

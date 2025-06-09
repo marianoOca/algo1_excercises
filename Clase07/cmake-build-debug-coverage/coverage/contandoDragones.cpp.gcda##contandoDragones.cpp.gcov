@@ -1,0 +1,11 @@
+        -:    0:Source:C:/Users/maria/Desktop/Taller/Algoritmos I/Clase7/ej3/contandoDragones.cpp
+        -:    0:Graph:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej3\contandoDragones.cpp.gcno
+        -:    0:Data:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej3\contandoDragones.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+    #####:    1:int contandoDragones(int T, int d1, int d2, int d3) {
+    $$$$$:    1-block  0
+    #####:    2:	return 0;
+    $$$$$:    2-block  0
+        -:    3:	// Borrar el return dummy y completar
+        -:    4:}

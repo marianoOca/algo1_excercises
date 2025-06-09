@@ -1,0 +1,206 @@
+        -:    0:Source:C:/Users/maria/Desktop/Taller/Algoritmos I/Clase7/ej3/Test/baldosasDelPisoTEST.cpp
+        -:    0:Graph:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej3\Test\baldosasDelPisoTEST.cpp.gcno
+        -:    0:Data:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej3\Test\baldosasDelPisoTEST.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../baldosasDelPiso.h"
+        -:    2:#include "gtest/gtest.h"
+        -:    3:
+        -:    4:
+        8:    5:TEST(baldosasTEST, aulaRidiculamenteChica){
+        1:    5-block  0
+        1:    5-block  1
+        1:    5-block  2
+    %%%%%:    5-block  3
+    %%%%%:    5-block  4
+    %%%%%:    5-block  5
+        1:    5-block  6
+        1:    5-block  7
+        1:    5-block  8
+        1:    5-block  9
+        1:    5-block 10
+        1:    5-block 11
+        1:    5-block 12
+        1:    6:    int res = baldosasDelPiso(1,1,1);
+        1:    6-block  0
+        1:    7:    EXPECT_EQ(res, 1);
+        1:    7-block  0
+        1:    7-block  1
+    $$$$$:    7-block  2
+    $$$$$:    7-block  3
+    $$$$$:    7-block  4
+    $$$$$:    7-block  5
+    $$$$$:    7-block  6
+        1:    7-block  7
+    %%%%%:    7-block  8
+    %%%%%:    7-block  9
+    %%%%%:    7-block 10
+    %%%%%:    7-block 11
+    %%%%%:    7-block 12
+        1:    8:}
+        -:    9:
+        8:   10:TEST(baldosasTEST, aula4x4){
+        1:   10-block  0
+        1:   10-block  1
+        1:   10-block  2
+    %%%%%:   10-block  3
+    %%%%%:   10-block  4
+    %%%%%:   10-block  5
+        1:   10-block  6
+        1:   10-block  7
+        1:   10-block  8
+        1:   10-block  9
+        1:   10-block 10
+        1:   10-block 11
+        1:   10-block 12
+        1:   11:    int res = baldosasDelPiso(4,4,2);
+        1:   11-block  0
+        1:   12:    EXPECT_EQ(res, 4);
+        1:   12-block  0
+        1:   12-block  1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+        1:   12-block  7
+    %%%%%:   12-block  8
+    %%%%%:   12-block  9
+    %%%%%:   12-block 10
+    %%%%%:   12-block 11
+    %%%%%:   12-block 12
+        1:   13:}
+        -:   14:
+        8:   15:TEST(baldosasTEST, pasillo){
+        1:   15-block  0
+        1:   15-block  1
+        1:   15-block  2
+    %%%%%:   15-block  3
+    %%%%%:   15-block  4
+    %%%%%:   15-block  5
+        1:   15-block  6
+        1:   15-block  7
+        1:   15-block  8
+        1:   15-block  9
+        1:   15-block 10
+        1:   15-block 11
+        1:   15-block 12
+        1:   16:    int res = baldosasDelPiso(1,6,3);
+        1:   16-block  0
+        1:   17:    EXPECT_EQ(res, 2);
+        1:   17-block  0
+        1:   17-block  1
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+        1:   17-block  7
+    %%%%%:   17-block  8
+    %%%%%:   17-block  9
+    %%%%%:   17-block 10
+    %%%%%:   17-block 11
+    %%%%%:   17-block 12
+        1:   18:}
+        -:   19:
+        8:   20:TEST(baldosasTEST, otraAulaRidiculamenteChica){
+        1:   20-block  0
+        1:   20-block  1
+        1:   20-block  2
+    %%%%%:   20-block  3
+    %%%%%:   20-block  4
+    %%%%%:   20-block  5
+        1:   20-block  6
+        1:   20-block  7
+        1:   20-block  8
+        1:   20-block  9
+        1:   20-block 10
+        1:   20-block 11
+        1:   20-block 12
+        1:   21:    int res = baldosasDelPiso(2,2,3);
+        1:   21-block  0
+        1:   22:    EXPECT_EQ(res, 1);
+        1:   22-block  0
+        1:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+        1:   22-block  7
+    %%%%%:   22-block  8
+    %%%%%:   22-block  9
+    %%%%%:   22-block 10
+    %%%%%:   22-block 11
+    %%%%%:   22-block 12
+        1:   23:}
+        -:   24:
+        8:   25:TEST(baldosasTEST, aulaDe9x11){
+        1:   25-block  0
+        1:   25-block  1
+        1:   25-block  2
+    %%%%%:   25-block  3
+    %%%%%:   25-block  4
+    %%%%%:   25-block  5
+        1:   25-block  6
+        1:   25-block  7
+        1:   25-block  8
+        1:   25-block  9
+        1:   25-block 10
+        1:   25-block 11
+        1:   25-block 12
+        1:   26:    int res = baldosasDelPiso(9,11,2);
+        1:   26-block  0
+        1:   27:    EXPECT_EQ(res, 30);
+        1:   27-block  0
+        1:   27-block  1
+    $$$$$:   27-block  2
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+        1:   27-block  7
+    %%%%%:   27-block  8
+    %%%%%:   27-block  9
+    %%%%%:   27-block 10
+    %%%%%:   27-block 11
+    %%%%%:   27-block 12
+        1:   28:}
+        -:   29:
+        8:   30:TEST(baldosasTEST, otraAulaDe9x11){
+        1:   30-block  0
+        1:   30-block  1
+        1:   30-block  2
+    %%%%%:   30-block  3
+    %%%%%:   30-block  4
+    %%%%%:   30-block  5
+        1:   30-block  6
+        1:   30-block  7
+        1:   30-block  8
+        1:   30-block  9
+        1:   30-block 10
+        1:   30-block 11
+        1:   30-block 12
+        1:   31:    int res = baldosasDelPiso(9,11,3);
+        1:   31-block  0
+        1:   32:    EXPECT_EQ(res, 12);
+        1:   32-block  0
+        1:   32-block  1
+    $$$$$:   32-block  2
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+    $$$$$:   32-block  6
+        1:   32-block  7
+    %%%%%:   32-block  8
+    %%%%%:   32-block  9
+    %%%%%:   32-block 10
+    %%%%%:   32-block 11
+    %%%%%:   32-block 12
+        5:   33:}
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        1:   33-block  4
+        1:   33-block  5

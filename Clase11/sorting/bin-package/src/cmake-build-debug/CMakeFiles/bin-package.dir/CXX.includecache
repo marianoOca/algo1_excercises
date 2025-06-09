@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/bin-package/src/ejercicios.h
+iostream
+-
+fstream
+-
+vector
+-
+algorithm
+-
+set
+-
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/bin-package/src/main.cpp
+ejercicios.h
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/bin-package/src/ejercicios.h
+

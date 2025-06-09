@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/anagramas.h
+
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+anagramas.h
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/anagramas.h
+

@@ -1,0 +1,3 @@
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/cmake-build-debug/CMakeFiles/anagramas.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/maria/Desktop/Taller/Algoritmos I/Clase11/sorting/anagramas/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir

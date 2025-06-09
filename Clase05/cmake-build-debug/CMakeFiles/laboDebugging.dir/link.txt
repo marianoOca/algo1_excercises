@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\laboDebugging.dir/objects.a
+C:\PROGRA~1\HASKEL~1\86E4AC~1.5\mingw\bin\ar.exe cr CMakeFiles\laboDebugging.dir/objects.a @CMakeFiles\laboDebugging.dir\objects1.rsp
+C:\PROGRA~1\HASKEL~1\86E4AC~1.5\mingw\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\laboDebugging.dir/objects.a -Wl,--no-whole-archive  -o ..\laboDebugging.exe -Wl,--out-implib,..\liblaboDebugging.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\laboDebugging.dir\linklibs.rsp

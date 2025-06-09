@@ -1,0 +1,28 @@
+        -:    0:Source:C:/Users/maria/Desktop/Taller/Algoritmos I/Clase7/ej1/esPrimo.cpp
+        -:    0:Graph:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\esPrimo.cpp.gcno
+        -:    0:Data:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\esPrimo.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "esPrimo.h"
+        -:    2:
+        4:    3:bool esPrimo(int n) {
+        4:    3-block  0
+        4:    4:	if (n < 2) {
+        4:    4-block  0
+        1:    5:		return false;
+        1:    5-block  0
+        -:    6:	} else {
+        8:    7:		for (int i = 2; i < n; i++) {
+        3:    7-block  0
+        8:    7-block  1
+        5:    7-block  2
+        6:    8:			if (n % i == 0) {
+        6:    8-block  0
+        1:    9:				return false;
+        1:    9-block  0
+        -:   10:			}
+        -:   11:		}
+        2:   12:		return true;
+        2:   12-block  0
+        -:   13:	}
+        -:   14:}

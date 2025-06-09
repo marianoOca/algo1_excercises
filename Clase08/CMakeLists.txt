@@ -1,0 +1,105 @@
+cmake_minimum_required(VERSION 3.17)
+project(Clase8)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+include_directories(lib/googletest-master/googlemock/include)
+include_directories(lib/googletest-master/googlemock/include/gmock)
+include_directories(lib/googletest-master/googlemock/include/gmock/internal)
+include_directories(lib/googletest-master/googlemock/include/gmock/internal/custom)
+
+add_executable(Clase8
+        lib/googletest-master/ci/build-linux-autotools.sh
+        lib/googletest-master/ci/build-linux-bazel.sh
+        lib/googletest-master/ci/env-linux.sh
+        lib/googletest-master/ci/env-osx.sh
+        lib/googletest-master/ci/get-nprocessors.sh
+        lib/googletest-master/ci/install-linux.sh
+        lib/googletest-master/ci/install-osx.sh
+        lib/googletest-master/ci/log-config.sh
+        lib/googletest-master/ci/travis.sh
+        lib/googletest-master/googlemock/build-aux/.keep
+        lib/googletest-master/googlemock/cmake/gmock.pc.in
+        lib/googletest-master/googlemock/cmake/gmock_main.pc.in
+        lib/googletest-master/googlemock/docs/CheatSheet.md
+        lib/googletest-master/googlemock/docs/CookBook.md
+        lib/googletest-master/googlemock/docs/DesignDoc.md
+        lib/googletest-master/googlemock/docs/Documentation.md
+        lib/googletest-master/googlemock/docs/ForDummies.md
+        lib/googletest-master/googlemock/docs/FrequentlyAskedQuestions.md
+        lib/googletest-master/googlemock/docs/KnownIssues.md
+        lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+        lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump
+        lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-matchers.h
+        lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-port.h
+        lib/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h
+        lib/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h.pump
+        lib/googletest-master/googlemock/include/gmock/internal/gmock-internal-utils.h
+        lib/googletest-master/googlemock/include/gmock/internal/gmock-port.h
+        lib/googletest-master/googlemock/include/gmock/gmock-actions.h
+        lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-actions.h
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-actions.h.pump
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h.pump
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h.pump
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h
+        lib/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h.pump
+        lib/googletest-master/googlemock/include/gmock/gmock-matchers.h
+        lib/googletest-master/googlemock/include/gmock/gmock-more-actions.h
+        lib/googletest-master/googlemock/include/gmock/gmock-more-matchers.h
+        lib/googletest-master/googlemock/include/gmock/gmock-spec-builders.h
+        lib/googletest-master/googlemock/include/gmock/gmock.h
+        lib/googletest-master/googlemock/make/Makefile
+        lib/googletest-master/googlemock/msvc/2005/gmock.sln
+        lib/googletest-master/googlemock/msvc/2005/gmock.vcproj
+        lib/googletest-master/googlemock/msvc/2005/gmock_config.vsprops
+        lib/googletest-master/googlemock/msvc/2005/gmock_main.vcproj
+        lib/googletest-master/googlemock/msvc/2005/gmock_test.vcproj
+        lib/googletest-master/googlemock/msvc/2010/gmock.sln
+        lib/googletest-master/googlemock/msvc/2010/gmock.vcxproj
+        lib/googletest-master/googlemock/msvc/2010/gmock_config.props
+        lib/googletest-master/googlemock/msvc/2010/gmock_main.vcxproj
+        lib/googletest-master/googlemock/msvc/2010/gmock_test.vcxproj
+        lib/googletest-master/googlemock/msvc/2015/gmock.sln
+        lib/googletest-master/googlemock/msvc/2015/gmock.vcxproj
+        lib/googletest-master/googlemock/msvc/2015/gmock_config.props
+        lib/googletest-master/googlemock/msvc/2015/gmock_main.vcxproj
+        lib/googletest-master/googlemock/msvc/2015/gmock_test.vcxproj
+        lib/googletest-master/googlemock/scripts/generator/cpp/__init__.py
+        lib/googletest-master/googlemock/scripts/generator/cpp/ast.py
+        lib/googletest-master/googlemock/scripts/generator/cpp/gmock_class.py
+        lib/googletest-master/googlemock/scripts/generator/gmock_gen.py
+        lib/googletest-master/googlemock/scripts/generator/LICENSE
+        lib/googletest-master/googlemock/scripts/generator/README
+        lib/googletest-master/googlemock/scripts/generator/README.cppclean
+        lib/googletest-master/googlemock/scripts/fuse_gmock_files.py
+        lib/googletest-master/googlemock/scripts/gmock-config.in
+        lib/googletest-master/googlemock/scripts/gmock_doctor.py
+        lib/googletest-master/googlemock/scripts/upload.py
+        lib/googletest-master/googlemock/scripts/upload_gmock.py
+        lib/googletest-master/googlemock/CHANGES
+        lib/googletest-master/googlemock/CMakeLists.txt
+        lib/googletest-master/googlemock/configure.ac
+        lib/googletest-master/googlemock/CONTRIBUTORS
+        lib/googletest-master/googlemock/LICENSE
+        lib/googletest-master/googlemock/Makefile.am
+        lib/googletest-master/googlemock/README.md
+        lib/googletest-master/.gitignore
+        lib/googletest-master/.travis.yml
+        lib/googletest-master/appveyor.yml
+        lib/googletest-master/BUILD.bazel
+        lib/googletest-master/CMakeLists.txt
+        lib/googletest-master/configure.ac
+        lib/googletest-master/CONTRIBUTING.md
+        lib/googletest-master/LICENSE
+        lib/googletest-master/Makefile.am
+        lib/googletest-master/README.md
+        lib/googletest-master/WORKSPACE
+        cases.cpp
+        cases.h
+        ejercicios.cpp
+        ejercicios.h
+        main.cpp)

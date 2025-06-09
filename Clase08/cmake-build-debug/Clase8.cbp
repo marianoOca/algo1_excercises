@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Clase8"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Clase8">
+				<Option output="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Clase8.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/."/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 Clase8"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Clase8/fast">
+				<Option output="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Clase8.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/."/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal"/>
+					<Add directory="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 Clase8/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cases.cpp">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/cases.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/ejercicios.cpp">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/ejercicios.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/.gitignore">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/.travis.yml">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/BUILD.bazel">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/CMakeLists.txt">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/CONTRIBUTING.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/LICENSE">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/Makefile.am">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/README.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/WORKSPACE">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/appveyor.yml">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/build-linux-autotools.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/build-linux-bazel.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/env-linux.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/env-osx.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/get-nprocessors.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/install-linux.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/install-osx.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/log-config.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/ci/travis.sh">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/configure.ac">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/CHANGES">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/CMakeLists.txt">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/CONTRIBUTORS">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/LICENSE">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/Makefile.am">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/README.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/build-aux/.keep">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/configure.ac">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/CheatSheet.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/CookBook.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/DesignDoc.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/Documentation.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/ForDummies.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/FrequentlyAskedQuestions.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/docs/KnownIssues.md">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-actions.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-actions.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-actions.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-matchers.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-more-actions.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-more-matchers.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock-spec-builders.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/gmock.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-matchers.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/custom/gmock-port.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h.pump">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/gmock-internal-utils.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/include/gmock/internal/gmock-port.h">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/make/Makefile">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2005/gmock.sln">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2005/gmock.vcproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2005/gmock_config.vsprops">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2005/gmock_main.vcproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2005/gmock_test.vcproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2010/gmock.sln">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2010/gmock.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2010/gmock_config.props">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2010/gmock_main.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2010/gmock_test.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2015/gmock.sln">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2015/gmock.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2015/gmock_config.props">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2015/gmock_main.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/msvc/2015/gmock_test.vcxproj">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/fuse_gmock_files.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/LICENSE">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/README">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/README.cppclean">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/cpp/__init__.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/cpp/ast.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/cpp/gmock_class.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/generator/gmock_gen.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/gmock-config.in">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/gmock_doctor.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/upload.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/lib/googletest-master/googlemock/scripts/upload_gmock.py">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/main.cpp">
+			<Option target="Clase8"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/Desktop/Taller/Algoritmos I/Clase8/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

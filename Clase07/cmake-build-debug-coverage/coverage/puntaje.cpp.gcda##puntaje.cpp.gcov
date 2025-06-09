@@ -1,0 +1,27 @@
+        -:    0:Source:C:/Users/maria/Desktop/Taller/Algoritmos I/Clase7/ej1/puntaje.cpp
+        -:    0:Graph:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\puntaje.cpp.gcno
+        -:    0:Data:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\puntaje.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        2:    1:int puntaje(int b) {
+        2:    1-block  0
+        -:    2:	int res;
+        2:    3:	if (b < 10) {
+        2:    3-block  0
+        1:    4:		res = 2 * b;
+        1:    4-block  0
+        -:    5:	} else {
+        1:    6:		res = b;
+        1:    6-block  0
+        -:    7:	}
+        2:    8:	if (b % 3 == 0) {
+        2:    8-block  0
+        1:    9:		res = res + 10;
+        1:    9-block  0
+        -:   10:	} else {
+        1:   11:		res = res - 10;
+        1:   11-block  0
+        -:   12:	}
+        2:   13:	return res;
+        2:   13-block  0
+        -:   14:}

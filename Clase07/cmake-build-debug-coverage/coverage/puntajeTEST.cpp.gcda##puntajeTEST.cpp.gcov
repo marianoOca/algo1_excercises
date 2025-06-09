@@ -1,0 +1,86 @@
+        -:    0:Source:C:/Users/maria/Desktop/Taller/Algoritmos I/Clase7/ej1/Test/puntajeTEST.cpp
+        -:    0:Graph:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\Test\puntajeTEST.cpp.gcno
+        -:    0:Data:C:\Users\maria\Desktop\Taller\Algoritmos I\Clase7\cmake-build-debug-coverage\CMakeFiles\LaboTesting.dir\ej1\Test\puntajeTEST.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../puntaje.h"
+        -:    2:#include "gtest/gtest.h"
+        -:    3:
+        -:    4:// Escribir tests aca:
+        8:    5:TEST(puntajeTEST, numero9) {
+        1:    5-block  0
+        1:    5-block  1
+        1:    5-block  2
+    %%%%%:    5-block  3
+    %%%%%:    5-block  4
+    %%%%%:    5-block  5
+        1:    5-block  6
+        1:    5-block  7
+        1:    5-block  8
+        1:    5-block  9
+        1:    5-block 10
+        1:    5-block 11
+        1:    5-block 12
+        -:    6:    // setup
+        1:    7:    int b = 9;
+        -:    8:    //exercise
+        1:    9:    int result = puntaje(b);
+        1:    9-block  0
+        -:   10:    // check
+        1:   11:    EXPECT_EQ(result,28);
+        1:   11-block  0
+        1:   11-block  1
+    $$$$$:   11-block  2
+    $$$$$:   11-block  3
+    $$$$$:   11-block  4
+    $$$$$:   11-block  5
+    $$$$$:   11-block  6
+        1:   11-block  7
+    %%%%%:   11-block  8
+    %%%%%:   11-block  9
+    %%%%%:   11-block 10
+    %%%%%:   11-block 11
+    %%%%%:   11-block 12
+        1:   12:}
+        -:   13:
+        8:   14:TEST(puntajeTEST, numero10) {
+        1:   14-block  0
+        1:   14-block  1
+        1:   14-block  2
+    %%%%%:   14-block  3
+    %%%%%:   14-block  4
+    %%%%%:   14-block  5
+        1:   14-block  6
+        1:   14-block  7
+        1:   14-block  8
+        1:   14-block  9
+        1:   14-block 10
+        1:   14-block 11
+        1:   14-block 12
+        -:   15:    // setup
+        1:   16:    int b = 10;
+        -:   17:    //exercise
+        1:   18:    int result = puntaje(b);
+        1:   18-block  0
+        -:   19:    // check
+        1:   20:    EXPECT_EQ(result, 0);
+        1:   20-block  0
+        1:   20-block  1
+    $$$$$:   20-block  2
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+    $$$$$:   20-block  6
+        1:   20-block  7
+    %%%%%:   20-block  8
+    %%%%%:   20-block  9
+    %%%%%:   20-block 10
+    %%%%%:   20-block 11
+    %%%%%:   20-block 12
+        5:   21:}
+        1:   21-block  0
+        1:   21-block  1
+        1:   21-block  2
+        1:   21-block  3
+        1:   21-block  4
+        1:   21-block  5
